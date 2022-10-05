@@ -12,7 +12,9 @@ mysql Database is hosted in AWS RDS and its config are stored in a .env file.
 
 ==========================================
 SIGNUP
-POST : localhost:8800/api/auth/signup
+
+- METHOD : POST
+- URL : localhost:8800/api/auth/signup
 
 Body
 {
@@ -23,54 +25,60 @@ Body
 
 ---
 
-SIGNIN
-POST : localhost:8800/api/auth/signin
+- SIGNIN
+- METHOD : POST
+- URL : localhost:8800/api/auth/signin
 
-Body
-{
-"username":"test1",
-"password":"123456"
-}
-===========================================
+- Body
+  {
+  "username":"test1",
+  "password":"123456"
+  }
+  ===========================================
 
 ## CRUD
 
 ============================================
-ADD MOVIE
-POST : localhost:8800/api/crud/add
 
-Body
-{
-"name":"examplemovie",
-"rating":5.3,
-"cast":["Actor","Actress"],
-"genre":"Action",
-"releasedate": "2022-10-15"
-}
+- ADD MOVIE
+- METHOD : POST
+- URL : localhost:8800/api/crud/add
+
+- Body
+  {
+  "name":"examplemovie",
+  "rating":5.3,
+  "cast":["Actor","Actress"],
+  "genre":"Action",
+  "releasedate": "2022-10-15"
+  }
 
 ---
 
-DELETE MOVIE
-DELETE : localhost:8800/api/crud/delete/examplemovie
+- DELETE MOVIE
+- METHOD : DELETE
+- URL : localhost:8800/api/crud/delete/examplemovie
 
 ## Note: This will delete examplemovie from the database.(uses examplemovie as params)
 
 ---
 
-UPDATE MOVIE
-PUT: localhost:8800/api/crud/update/examplemovie
+- UPDATE MOVIE
+- METHOD : PUT
+- URL : localhost:8800/api/crud/update/examplemovie
 
-Body
-{
-"updateWhat":"RATING",
-"updateVal":"9.5"
-}
+- Body
+  {
+  "updateWhat":"RATING",
+  "updateVal":"9.5"
+  }
 
 ## Note: This takes movie name (examplemovie) from url params and updates the required field given in the Body.
 
 ---
 
-GET MOVIE
-GET: localhost:8800/api/crud/get/examplemovie
+- GET MOVIE
+- METHOD : GET
+- URL : localhost:8800/api/crud/get/examplemovie
 
 ## Note: This will show the entire details of examplemovie
