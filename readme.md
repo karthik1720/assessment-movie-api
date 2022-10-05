@@ -16,7 +16,8 @@ Body
 "password":"123456"
 }
 
-- SIGNIN
+SIGNIN
+
 - METHOD : POST
 - URL : localhost:8800/api/auth/signin
 
@@ -28,7 +29,8 @@ Body
 
 ## CRUD
 
-- ADD MOVIE
+ADD MOVIE
+
 - METHOD : POST
 - URL : localhost:8800/api/crud/add
 
@@ -41,13 +43,15 @@ Body
 "releasedate": "2022-10-15"
 }
 
-- DELETE MOVIE
+DELETE MOVIE
+
 - METHOD : DELETE
 - URL : localhost:8800/api/crud/delete/examplemovie
 
 ## Note: This will delete examplemovie from the database.(uses examplemovie as params)
 
-- UPDATE MOVIE
+UPDATE MOVIE
+
 - METHOD : PUT
 - URL : localhost:8800/api/crud/update/examplemovie
 
@@ -59,7 +63,8 @@ Body
 
 ## Note: This takes movie name (examplemovie) from url params and updates the required field given in the Body.
 
-- GET MOVIE
+GET MOVIE
+
 - METHOD : GET
 - URL : localhost:8800/api/crud/get/examplemovie
 
